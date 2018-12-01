@@ -23,7 +23,6 @@ void loop() {
   Nivel=analogRead(A5);
   int i=0;
   if(Nivel>620){ //Tanque lleno 
-    relevador=millis();
     digitalWrite(rele,HIGH);//Encender bomba
     digitalWrite(led2,HIGH); //Bomba encendida
     for(i=1;i<=240;i++){
