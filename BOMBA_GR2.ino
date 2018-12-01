@@ -1,7 +1,7 @@
 /*
  * Programa para control de bomba
  * Granados Villeda Johan Raciel
- * Alpha 1
+ * Alpha 5
 */
 
 const int led1=2; //LEDS de control
@@ -25,6 +25,7 @@ void loop() {
   if(Nivel>620){ //Tanque lleno 
     relevador=millis();
     digitalWrite(rele,HIGH);//Encender bomba
+    digitalWrite(led2,HIGH); //Bomba encendida
     for(i=1;i<=240;i++){
       Serial.print(i);
       Serial.print(" | \n");
